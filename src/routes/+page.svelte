@@ -54,6 +54,6 @@
 	{/each}
 </div>
 
-<div class="absolute bottom-[15px] text-xs text-gray-400">
+<div class="mt-10 text-xs text-gray-400 md:absolute md:bottom-[15px] md:mt-0">
 	&copy; {thisYear} PT Margo Mitro Joyo. All rights reserved.
 </div>
