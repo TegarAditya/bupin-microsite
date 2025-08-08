@@ -1,3 +1,8 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@theme {
+  --font-display: "Bricolage Grotesque", sans-serif; 
+  --font-sans: "Inter", sans-serif;
+}
