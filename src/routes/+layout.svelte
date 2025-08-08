@@ -16,10 +16,10 @@
 	<title>Portal Bupin</title>
 </svelte:head>
 
-<div class="relative flex min-h-screen flex-col items-center justify-start p-6 text-gray-800 bg-gradient-to-br from-pink-50 via-blue-50 to-purple-50">
+<div class="relative flex min-h-screen flex-col items-center justify-between p-6 text-gray-800 bg-gradient-to-br from-pink-50 via-blue-50 to-purple-50">
 	<div class="absolute -z-10 inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.6)_0%,transparent_70%)] pointer-events-none"></div>
 	{@render children()}
-	<div class="absolute bottom-5 text-xs text-gray-500 md:absolute md:bottom-[15px]">
+	<div class="mt-10 text-xs text-gray-500 md:absolute md:bottom-[15px]">
 		&copy; {thisYear} PT Margo Mitro Joyo. All rights reserved.
 	</div>
 </div>
