@@ -69,7 +69,7 @@
 		<a
 			{href}
 			target="_blank"
-			class="flex items-center justify-center rounded-lg bg-white shadow-md px-6 py-3 text-center text-sm text-gray-800 transition hover:bg-gray-100 md:text-base"
+			class="flex items-center justify-center rounded-lg bg-white shadow-md px-6 py-3 text-center text-gray-800 transition hover:bg-gray-100 md:text-base"
 		>
 			<Fa {icon} class="mr-2 h-5 w-5" />
 			{text}
