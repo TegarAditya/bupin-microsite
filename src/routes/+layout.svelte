@@ -1,6 +1,9 @@
 <script lang="ts">
 	import '../app.css';
-	import '@fontsource/space-grotesk';
+	import '@fontsource/bricolage-grotesque/400.css';
+	import '@fontsource/bricolage-grotesque/600.css';
+	import '@fontsource/inter/400.css';
+	import '@fontsource/inter/600.css';
 
 	let { children } = $props();
 
@@ -23,9 +26,3 @@
 		&copy; {thisYear} PT Margo Mitro Joyo. All rights reserved.
 	</div>
 </div>
-
-<style>
-	:global(body) {
-		font-family: 'Space Grotesk', sans-serif;
-	}
-</style>

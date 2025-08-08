@@ -9,7 +9,7 @@
 		faApple,
 		type IconDefinition
 	} from '@fortawesome/free-brands-svg-icons';
-	import { faDesktop } from '@fortawesome/free-solid-svg-icons';
+	import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 	interface LinkItem {
 		href: string;
@@ -39,9 +39,9 @@
 			icon: faApple
 		},
 		{
-			href: 'https://desktop.bupin.id/',
-			text: 'Bupin Desktop',
-			icon: faDesktop
+			href: 'https://web.bupin.id/',
+			text: 'Website Bupin',
+			icon: faGlobe
 		}
 	];
 </script>
@@ -56,11 +56,12 @@
 		width="500"
 		class="mb-2 mt-5 h-52 w-auto md:h-72"
 	/>
-	<h1 class="text-center text-xl font-semibold md:text-2xl text-gray-800">
-		Selamat Datang di Portal Bupin
+	<h1 class="text-center text-2xl font-display font-semibold md:text-2xl text-gray-800">
+		Hai, Sobat Digitalian!
 	</h1>
-	<p class="text-sm text-gray-600 md:text-base">
-		Email: <a href="mailto:support@bupin.id" class="underline">support@bupin.id</a>
+
+	<p class="text-sm text-center text-gray-600 md:text-base">
+		Untuk bantuan atau informasi lebih lanjut, silakan hubungi <a href="mailto:support@bupin.id" class="underline font-semibold">support@bupin.id</a>
 	</p>
 </div>
 
@@ -72,7 +73,7 @@
 			class="flex items-center justify-center rounded-lg bg-white shadow-md px-6 py-3 text-center text-gray-800 transition hover:bg-gray-100 md:text-base"
 		>
 			<Fa {icon} class="mr-2 h-5 w-5" />
-			{text}
+			<span class="font-display">{text}</span>
 		</a>
 	{/each}
 </div>
