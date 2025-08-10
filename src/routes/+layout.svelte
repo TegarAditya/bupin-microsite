@@ -27,7 +27,7 @@
 	<title>Portal Bupin</title>
 </svelte:head>
 
-<div class="relative min-h-screen flex flex-col items-center justify-between px-6 text-gray-800 bg-gradient-to-br from-pink-50 via-blue-50 to-purple-50">
+<div class="relative min-h-dvh flex flex-col items-center justify-between px-6 text-gray-800 bg-gradient-to-br from-pink-50 via-blue-50 to-purple-50">
 	<div class="absolute -z-10 inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.6)_0%,transparent_70%)] pointer-events-none"></div>
 	<div class="hidden md:block"></div>
 	{@render children()}
