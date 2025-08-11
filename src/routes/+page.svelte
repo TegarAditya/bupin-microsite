@@ -1,6 +1,5 @@
 <script lang="ts">
 	import MascottImage from '$lib/images/mascott.png?enhanced';
-
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 	import {
 		faInstagram,
@@ -10,6 +9,8 @@
 		type IconDefinition
 	} from '@fortawesome/free-brands-svg-icons';
 	import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+	import { onMount } from 'svelte';
+	import { animate, press } from 'motion';
 
 	interface LinkItem {
 		href: string;
@@ -44,28 +45,46 @@
 			icon: faGlobe
 		}
 	];
+
+	let ready = $state(false);
+
+	onMount(() => {
+		ready = true;
+		animate(
+			'#mascott-image',
+			{ scale: [0.5, 1], opacity: [0, 0.5, 1] },
+			{ type: 'spring', bounce: 0.6 }
+		);
+
+		press('#mascott-image', (el) => {
+			animate(el, { scale: [1, 0.8] });
+			return () =>
+				animate(el, { scale: [0.8, 1] }, { type: 'spring', bounce: 0.6 });
+		});
+	});
 </script>
 
 <div class="w-full">
-	<div class="flex max-w-md mx-auto flex-col items-center justify-center space-y-3.5">
-		<enhanced:img
-			src={MascottImage}
-			alt="Maskot Bupin"
-			loading="eager"
-			fetchpriority="high"
-			height="500"
-			width="500"
-			class="mt-5 mb-2 h-52 w-auto md:h-72"
-		/>
+	<div class="mx-auto flex max-w-md flex-col items-center justify-center space-y-3.5">
+		<div id="mascott-image" class="mt-5 mb-2 h-52 md:h-72" class:invisible={!ready}>
+			<enhanced:img
+				src={MascottImage}
+				alt="Maskot Bupin"
+				loading="eager"
+				fetchpriority="high"
+				height="500"
+				width="500"
+				class="h-full w-auto"
+			/>
+		</div>
+
 		<h1 class="font-display text-center text-2xl font-semibold text-gray-800 md:text-2xl">
 			Hai, Sobat Digitalian!
 		</h1>
 
 		<p class="text-center text-sm text-gray-600 md:text-base">
-			Untuk bantuan atau informasi lebih lanjut, silakan hubungi <a
-				href="mailto:support@bupin.id"
-				class="font-semibold underline">support@bupin.id</a
-			>
+			Untuk bantuan atau informasi lebih lanjut, silakan hubungi
+			<a href="mailto:support@bupin.id" class="font-semibold underline">support@bupin.id</a>
 		</p>
 	</div>
 
