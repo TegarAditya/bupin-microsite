@@ -69,7 +69,11 @@
 		});
 
 		document.querySelectorAll('.link-item').forEach((el, i) => {
-			animate(el, { opacity: [0, 1], transform: ['translateY(10px)', 'translateY(0)'] }, { duration: 0.3 });
+			animate(
+				el,
+				{ opacity: [0, 1], transform: ['translateY(-10px)', 'translateY(0)'] },
+				{ duration: 0.3, delay: i * 0.1 }
+			);
 		});
 	});
 </script>
@@ -80,9 +84,9 @@
 	<link rel="canonical" href="https://portal.bupin.id" />
 </svelte:head>
 
-<div class="w-full">
+<div class="w-full" class:invisible={!ready}>
 	<div class="mx-auto flex max-w-md flex-col items-center justify-center space-y-3.5">
-		<div id="mascott-image" class="mt-5 mb-2 h-56 md:h-72" class:invisible={!ready}>
+		<div id="mascott-image" class="mt-5 mb-2 h-56 md:h-72">
 			<enhanced:img
 				src={MascottImage}
 				alt="Maskot Bupin"
