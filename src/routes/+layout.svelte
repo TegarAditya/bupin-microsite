@@ -19,12 +19,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="x-ua-compatible" content="IE=7" />
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<meta name="description" content="Akses berbagai aplikasi Bupin 4.0" />
 	<link rel="preload" as="font" type="font/woff2" href={BricolageGrotesque400} crossorigin="anonymous" />
 	<link rel="preload" as="font" type="font/woff2" href={BricolageGrotesque600} crossorigin="anonymous" />
 	<link rel="preload" as="font" type="font/woff2" href={Inter400} crossorigin="anonymous" />
 	<link rel="preload" as="font" type="font/woff2" href={Inter600} crossorigin="anonymous" />
-	<title>Portal Bupin</title>
 </svelte:head>
 
 <div class="relative min-h-dvh flex flex-col items-center justify-between px-6 text-gray-800 bg-gradient-to-br from-pink-50 via-blue-50 to-purple-50">
