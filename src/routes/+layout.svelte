@@ -30,6 +30,6 @@
 	<div class="block"></div>
 	{@render children()}
 	<div class="mt-10 mb-7 text-sm text-gray-500">
-		&copy; {thisYear} PT Margo Mitro Joyo.
+		&copy; {thisYear} <a href="https://mmj.co.id" target="_blank" class="hover:underline">PT Margo Mitro Joyo</a>.
 	</div>
 </div>
