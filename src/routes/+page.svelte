@@ -8,7 +8,7 @@
 		faApple,
 		type IconDefinition
 	} from '@fortawesome/free-brands-svg-icons';
-	import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+	import { faGlobe, faTrophy } from '@fortawesome/free-solid-svg-icons';
 	import { onMount } from 'svelte';
 	import { animate, press } from 'motion';
 
@@ -20,6 +20,12 @@
 	}
 
 	const links: LinkItem[] = [
+		{
+			href: 'https://betc.bupin.id',
+			text: 'Registrasi Bupin Event 2026',
+			icon: faTrophy,
+			beat: false
+		},
 		{
 			href: 'https://play.google.com/store/apps/details?id=com.mmj.qr_scan&hl=id',
 			text: 'Play Store',
@@ -109,7 +115,7 @@
 	</div>
 
 	<div class="mx-auto mt-6 w-full max-w-md space-y-4">
-		{#each links as { text, href, icon, beat }}
+		{#each links as { text, href, icon, beat } (href)}
 			<a
 				{href}
 				target="_blank"
